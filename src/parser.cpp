@@ -42,7 +42,7 @@ Expr parse_one(const std::vector<std::string>& tokens, std::size_t& position) {
         std::size_t parsed_characters = 0;
         const double number = std::stod(token, &parsed_characters);
 
-        if (parsed_characters == tokens.size()) {
+        if (parsed_characters == token.size()) {
             return Expr {number};
         }
     } catch (const std::invalid_argument&) {
